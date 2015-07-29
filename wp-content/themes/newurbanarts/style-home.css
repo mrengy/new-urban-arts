@@ -1,0 +1,94 @@
+html {
+	height: 100%;	
+}
+body {
+	padding:0;
+	margin:0;
+	height: 100%;
+}
+#homecallout {
+	position:absolute;
+	z-index:100;
+	top:30px;
+	right:100px;
+	
+}
+
+#page {
+	background:url(/wp-content/themes/twentyeleven-child/images/home-main.png) no-repeat 0px 40px;
+	padding-top:40px;
+}
+
+#site-title {
+	margin-right: 0px;
+	padding: 0;
+}
+
+#primary {
+	float: left;
+	margin: 0 10px 0 0px;
+	width: 100%;
+}
+
+#main {
+	clear: both;
+	padding: 0;
+	position:relative;
+	height:600px;
+}
+
+.singular.page .hentry {
+	padding: 0;
+}
+.singular .hentry {
+	border-bottom: none;
+	padding: 0;
+	margin:0;
+	position: relative;
+}
+.entry-content {
+	padding: 0;
+	margin:0;
+}
+
+
+#mainnav {
+	position:absolute;
+	z-index:100;
+	top:415px;
+	left:710px;
+}
+#mainnav .cssmb-before {
+	background:none;
+	height:0;
+	border-bottom:solid 0px #000;
+}
+#mainnav .cssmb ul li{
+	border-bottom:solid 0px #000;
+}
+#mainnav .cssmb ul li a {
+	padding:2px 4px 2px 10px;	
+	color:#FFF;
+}
+#mainnav .cssmb ul li a:hover {
+	color:#000;
+	text-decoration:none;
+	background:none;
+}
+
+#mainnav .cssmb ul li a.nav-home {
+	display:none;	
+}
+
+#mainnav .cssmb ul li a.nav-about:hover,
+#mainnav .cssmb ul li a.nav-whatwedo:hover,
+#mainnav .cssmb ul li a.nav-impact:hover,
+#mainnav .cssmb ul li a.nav-people:hover,
+#mainnav .cssmb ul li a.nav-getinvolved:hover,
+#mainnav .cssmb ul li a.nav-donate:hover,
+#mainnav .cssmb ul li a.nav-whatsnew:hover,
+#mainnav .cssmb ul li a.nav-exchange:hover,
+#mainnav .cssmb ul li a.nav-espanol:hover
+{
+	background:none;
+}

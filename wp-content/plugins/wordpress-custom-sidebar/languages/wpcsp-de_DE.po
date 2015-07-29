@@ -1,0 +1,79 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WordPress Custom Sidebar\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-08-08 08:30+0100\n"
+"PO-Revision-Date: 2011-08-08 08:30+0100\n"
+"Last-Translator: Designstudio, Phiilipp Speck <mail@destio.de>\n"
+"Language-Team: Designstudio, Philipp Speck <mail@destio.de>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
+
+#: ../wp-custom-sidebar.php:31
+#: ../wp-custom-sidebar.php:43
+msgid "Sidebars"
+msgstr "Seitenleisten"
+
+#: ../wp-custom-sidebar.php:32
+#: ../wp-custom-sidebar.php:76
+#: ../wp-custom-sidebar.php:77
+msgid "Sidebar"
+msgstr "Seitenleiste"
+
+#: ../wp-custom-sidebar.php:33
+msgid "Add New"
+msgstr "Erstellen"
+
+#: ../wp-custom-sidebar.php:34
+msgid "Add New Sidebar"
+msgstr "Neue Seitenleiste erstellen"
+
+#: ../wp-custom-sidebar.php:35
+msgid "Edit Sidebar"
+msgstr "Seitenleiste bearbeiten"
+
+#: ../wp-custom-sidebar.php:36
+msgid "New Sidebar"
+msgstr "Neue Seitenleiste"
+
+#: ../wp-custom-sidebar.php:37
+msgid "All Sidebars"
+msgstr "Alle Seitenleisten"
+
+#: ../wp-custom-sidebar.php:38
+msgid "View Sidebars"
+msgstr "Seitenleisten anzeigen"
+
+#: ../wp-custom-sidebar.php:39
+msgid "Search Sidebars"
+msgstr "Seitenleisten suchen"
+
+#: ../wp-custom-sidebar.php:40
+msgid "No Sidebars found"
+msgstr "Keine Seitenleisten gefunden"
+
+#: ../wp-custom-sidebar.php:41
+msgid "No Sidebars found in Trash"
+msgstr "Keine Seitenleisten im Papierkorb"
+
+#: ../wp-custom-sidebar.php:71
+msgid "Create new sidebar"
+msgstr "Neue Seitenleiste erstellen"
+
+#: ../wp-custom-sidebar.php:144
+msgid "To assign custom sidebars inside post or pages drag the widget to an area of your choice."
+msgstr "Ziehen Sie das Widget in eine Sidebar Ihrer Wahl um Seiten oder Artikeln benutzerdefinierte Seitenleisten zuzuordnen."
+
+#: ../wp-custom-sidebar.php:145
+msgid "Custom Sidebar"
+msgstr "Custom Sidebar"
+
+#~ msgid "Your site&#8217;s custom sidebars"
+#~ msgstr "Ziehen Sie das Widget in eine Sidebar Ihrer Wahl."

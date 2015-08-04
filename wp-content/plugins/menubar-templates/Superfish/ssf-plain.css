@@ -1,0 +1,261 @@
+/* 
+	WordPress Menubar Plugin
+	ssf-plain.css stylesheet for the Superfish template
+
+	Credits:
+
+	Superfish v1.4.8 - jQuery menu plugin by Joel Birch
+	http://users.tpg.com.au/j_birch/plugins/superfish/
+
+	Search box design by the LightWord theme
+	http://www.lightword-theme.com/
+*/
+
+/*** start superfish.css ***/
+
+/*** ESSENTIAL STYLES ***/
+.ssf-plain, .ssf-plain * {
+	margin:			0;
+	padding:		0;
+	list-style:		none;
+}
+.ssf-plain {
+	line-height:	1.0;
+}
+.ssf-plain ul {
+	position:		absolute;
+	top:			-999em;
+	width:		220px; /* left offset of submenus need to match (see below) */
+}
+.ssf-plain ul li {
+	width:			100%;
+}
+.ssf-plain li:hover {
+	visibility:		inherit; /* fixes IE7 'sticky bug' */
+}
+.ssf-plain li {
+	float:			left;
+	position:		relative;
+}
+.ssf-plain a {
+	display:		block;
+	position:		relative;
+}
+.ssf-plain li:hover ul,
+.ssf-plain li.wpm-hover ul {
+	left:			0px;
+	top:			37px; /* match top ul list item height */
+	z-index:		99;
+}
+ul.ssf-plain li:hover li ul,
+ul.ssf-plain li.wpm-hover li ul {
+	top:			-999em;
+}
+ul.ssf-plain li li:hover ul,
+ul.ssf-plain li li.wpm-hover ul {
+	left:			10em; /* match ul width */
+	top:			0;
+}
+ul.ssf-plain li li:hover li ul,
+ul.ssf-plain li li.wpm-hover li ul {
+	top:			-999em;
+}
+ul.ssf-plain li li li:hover ul,
+ul.ssf-plain li li li.wpm-hover ul {
+	left:			10em; /* match ul width */
+	top:			0;
+}
+
+/*** arrows **/
+.ssf-plain a.sf-with-ul {
+	padding-right: 	2.25em;
+	min-width:		1px; /* trigger IE7 hasLayout so spans position accurately */
+}
+.sf-sub-indicator {
+	position:		absolute;
+	display:		block;
+	right:			.75em;
+	top:			1.05em; /* IE6 only */
+	width:			10px;
+	height:			10px;
+	text-indent: 	-999em;
+	overflow:		hidden;
+	background:		url('arrows-ffffff.png') no-repeat -10px -100px; /* 8-bit indexed alpha png. IE6 gets solid image only */
+}
+a > .sf-sub-indicator {  /* give all except IE6 the correct values */
+	top:			.8em;
+	background-position: 0 -100px; /* use translucent arrow for modern browsers*/
+}
+/* apply hovers to modern browsers */
+a:focus > .sf-sub-indicator,
+a:hover > .sf-sub-indicator,
+a:active > .sf-sub-indicator,
+li:hover > a > .sf-sub-indicator,
+li.wpm-hover > a > .sf-sub-indicator {
+	background-position: -10px -100px; /* arrow hovers for modern browsers*/
+}
+
+/* point right for anchors in subs */
+.ssf-plain ul .sf-sub-indicator { background-position:  -10px 0; }
+.ssf-plain ul a > .sf-sub-indicator { background-position:  0 0; }
+/* apply hovers to modern browsers */
+.ssf-plain ul a:focus > .sf-sub-indicator,
+.ssf-plain ul a:hover > .sf-sub-indicator,
+.ssf-plain ul a:active > .sf-sub-indicator,
+.ssf-plain ul li:hover > a > .sf-sub-indicator,
+.ssf-plain ul li.wpm-hover > a > .sf-sub-indicator {
+	background-position: -10px 0; /* arrow hovers for modern browsers*/
+}
+
+/*** shadows for all but IE6 ***/
+.sf-shadow ul {
+/*	background:	url('shadow.png') no-repeat bottom right;
+	padding: 0 8px 9px 0;
+	-moz-border-radius-bottomleft: 17px;
+	-moz-border-radius-topright: 17px;
+	-webkit-border-top-right-radius: 17px;
+	-webkit-border-bottom-left-radius: 17px;
+	*/
+}
+.sf-shadow ul.sf-shadow-off {
+	background: transparent;
+}
+
+/*** end superfish.css ***/
+
+.ssf-plain-wrap {
+	margin: 		0;
+	padding:		5px 0 0 0;
+	font-size: 	12px;
+	font-weight: 	bold;
+	height:		43px;
+	background:	transparent;			/* color 1 */
+	position:		relative;
+	z-index:		49;
+}
+
+/*** DEMO SKIN ***/
+.ssf-plain {
+	float:			left;
+	width:			100%; 
+}
+.ssf-plain a {
+	border:			0;
+	padding: 		.75em 1.5em;
+	text-decoration: none;
+}
+.ssf-plain li.nolink a {
+	border:			0;
+	padding: 		.75em 0em;
+	text-decoration: none;
+}
+
+
+.ssf-plain li li a {
+	border:			0;
+	padding: 		3px 10px;
+	text-decoration: none;
+}
+.ssf-plain a, .ssf-plain a:link, .ssf-plain a:visited  {
+	color:			#06304d;			/* text color 1 */
+	font:			normal 13px/27px Georgia, "Times New Roman", Times, serif;
+	text-transform:	uppercase;
+	letter-spacing:	2px;
+}
+.ssf-plain a span {
+	visibility: hidden;
+	text-decoration:none;
+}
+.ssf-plain li li a, .ssf-plain li li a:link, .ssf-plain li li a:visited  {
+	color:			#6D6E71;			/* text color 2 */
+	line-height:		14px;
+}
+.ssf-plain li li a:hover, .ssf-plain li li.selected a {
+	color:			#7EBBD3;
+}
+
+
+
+.ssf-plain li {
+	height:			43px;
+	background:		transparent;			/* color 1 */
+}
+.ssf-plain li li {
+	height:			auto;
+	background:		transparent url(/wp-content/themes/twentyten-child/images/arrow-blue.png) no-repeat 5px 5px;			/* color 2 */
+	padding-left:10px;
+}
+.ssf-plain li:hover, .ssf-plain li.wpm-hover,
+.ssf-plain a:focus, .ssf-plain a:hover, .ssf-plain a:active {
+	text-decoration: none;
+	outline:		0;
+}
+
+.ssf-plain li.selected, 
+.ssf-plain li.current-cat, 
+.ssf-plain li.current-cat-parent, 
+.ssf-plain li.current_page_item, 
+.ssf-plain li.current_page_parent,
+.ssf-plain li.current_page_ancestor {
+
+}
+
+.ssf-plain li.right {
+	float: right;
+}
+
+.ssf-plain li.right a, 
+.ssf-plain li.right form {
+	border-left:	1px solid #F9F0C2;	/* border color */	
+	border-right:	0;
+}
+
+.ssf-plain form {
+	margin: 0;
+	padding: 0;
+	background: url('searchbox.png') no-repeat center center;
+	height: 30px;
+	width: 195px;
+	border-right:	1px solid #F9F0C2;	/* border color */	
+}
+
+.ssf-plain form input.wpm-text {
+	border: 0;
+	background: transparent;
+	margin: 6px 0 0 6px;
+	width: 154px;
+	}
+
+.ssf-plain form input.wpm-submit {
+	border: 0;
+	background: transparent;
+	cursor: pointer;
+	height: 20px;
+	width: 26px;
+}
+
+.ssf-plain-after {
+	clear: both;
+	margin: 0;
+	padding: 0;
+/*	background: url('shadow2.png') repeat-x; */
+	height: 6px;
+}
+
+.ssf-plain {
+	margin:0 0 0 50px;	
+}
+
+.ssf-plain ul {
+	background-color:#FFF;
+	border:solid 3px #6D6E71;
+/*	background: url(/wp-content/themes/twentyten-child/images/nav/nav-bg-wht.png);
+	-moz-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+	padding:10px 0;
+*/
+}
+li.homelink a {
+	padding-right:50px;	
+}

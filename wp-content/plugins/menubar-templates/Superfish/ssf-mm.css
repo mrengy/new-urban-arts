@@ -1,0 +1,251 @@
+/* 
+	WordPress Menubar Plugin
+	ssf-mm.css stylesheet for the Superfish template
+
+	Credits:
+
+	Superfish v1.4.8 - jQuery menu plugin by Joel Birch
+	http://users.tpg.com.au/j_birch/plugins/superfish/
+
+	Search box design by the LightWord theme
+	http://www.lightword-theme.com/
+*/
+
+/*** start superfish.css ***/
+
+/*** ESSENTIAL STYLES ***/
+.ssf-mm, .ssf-mm * {
+	margin:			0;
+	padding:		0;
+	list-style:		none;
+}
+.ssf-mm {
+	line-height:	1.0;
+}
+.ssf-mm ul {
+	position:		absolute;
+	top:			-999em;
+	width:			151px; /* left offset of submenus need to match (see below) */
+	background-color:#005596;
+	padding-bottom: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+-webkit-border-bottom-left-radius: 10px;
+-moz-border-radius-bottomright: 10px;
+-moz-border-radius-bottomleft: 10px;
+border-bottom-right-radius: 10px;
+border-bottom-left-radius: 10px;
+}
+.ssf-mm ul li {
+	width:			100%;
+}
+.ssf-mm li:hover {
+	visibility:		inherit; /* fixes IE7 'sticky bug' */
+}
+.ssf-mm li {
+	float:			left;
+	position:		relative;
+}
+.ssf-mm a {
+	display:		block;
+	position:		relative;
+}
+.ssf-mm li:hover ul,
+.ssf-mm li.wpm-hover ul {
+	left:			0;
+	top:			25px; /* match top ul list item height */
+	z-index:		99;
+}
+ul.ssf-mm li:hover li ul,
+ul.ssf-mm li.wpm-hover li ul {
+	top:			-999em;
+}
+ul.ssf-mm li li:hover ul,
+ul.ssf-mm li li.wpm-hover ul {
+	left:			151px; /* match ul width */
+	top:			0;
+}
+ul.ssf-mm li li:hover li ul,
+ul.ssf-mm li li.wpm-hover li ul {
+	top:			-999em;
+}
+ul.ssf-mm li li li:hover ul,
+ul.ssf-mm li li li.wpm-hover ul {
+	left:			10em; /* match ul width */
+	top:			0;
+}
+
+/*** arrows **/
+.ssf-mm a.sf-with-ul {
+	padding-right: 	2.25em;
+	min-width:		1px; /* trigger IE7 hasLayout so spans position accurately */
+}
+.sf-sub-indicator {
+	position:		absolute;
+	display:		block;
+	right:			.75em;
+	top:			1.05em; /* IE6 only */
+	width:			10px;
+	height:			10px;
+	text-indent: 	-999em;
+	overflow:		hidden;
+	background:		url('arrows-ffffff.png') no-repeat -10px -100px; /* 8-bit indexed alpha png. IE6 gets solid image only */
+}
+a > .sf-sub-indicator {  /* give all except IE6 the correct values */
+	top:			.8em;
+	background-position: 0 -100px; /* use translucent arrow for modern browsers*/
+}
+/* apply hovers to modern browsers */
+a:focus > .sf-sub-indicator,
+a:hover > .sf-sub-indicator,
+a:active > .sf-sub-indicator,
+li:hover > a > .sf-sub-indicator,
+li.wpm-hover > a > .sf-sub-indicator {
+	background-position: -10px -100px; /* arrow hovers for modern browsers*/
+}
+
+/* point right for anchors in subs */
+.ssf-mm ul .sf-sub-indicator { background-position:  -10px 0; }
+.ssf-mm ul a > .sf-sub-indicator { background-position:  0 0; }
+/* apply hovers to modern browsers */
+.ssf-mm ul a:focus > .sf-sub-indicator,
+.ssf-mm ul a:hover > .sf-sub-indicator,
+.ssf-mm ul a:active > .sf-sub-indicator,
+.ssf-mm ul li:hover > a > .sf-sub-indicator,
+.ssf-mm ul li.wpm-hover > a > .sf-sub-indicator {
+	background-position: -10px 0; /* arrow hovers for modern browsers*/
+}
+
+/*** shadows for all but IE6 ***/
+.sf-shadow ul {
+	/*background:	url('shadow.png') no-repeat bottom right;*/
+	padding: 0 8px 9px 0;
+/*	-moz-border-radius-bottomleft: 17px;
+	-moz-border-radius-topright: 17px;
+	-webkit-border-top-right-radius: 17px;
+	-webkit-border-bottom-left-radius: 17px;
+	*/
+}
+.sf-shadow ul.sf-shadow-off {
+	background: transparent;
+}
+
+/*** end superfish.css ***/
+
+.ssf-mm-wrap {
+	margin: 		0;
+	padding:		0;
+	font-size: 	20px;
+	font-weight: 	normal;
+	font-family: 'IM Fell DW Pica', serif;
+	height:		25px;
+	background:	transparent;			/* color 1 */
+}
+
+/*** DEMO SKIN ***/
+.ssf-mm {
+	float:			left;
+	width:			100%; 
+}
+.ssf-mm a {
+	border:			0;
+	padding: 			0 25px 0 0;
+	text-decoration: none;
+}
+.ssf-mm li li a {
+	border:			0;
+	padding: 		.5em 1em 0px;
+	margin-top:	.5em;
+	text-decoration: none;
+	border-top:		2px dotted #46a941;	/* border color */	
+	border-left:	0px solid #FFF;	/* border color */	
+}
+.ssf-mm li li:first-child a {
+	margin-top:	0;
+	border-top:		0px dotted #46a941;	/* border color */		
+}
+.ssf-mm a, .ssf-mm a:visited  {
+	color:		#FFF;				
+	font-size: 	20px;
+	font-weight: 	400;
+	font-family: 'IM Fell Double Pica', serif;
+}
+.ssf-mm a:hover {
+	color:		#005596;				
+}
+.ssf-mm li li a, .ssf-mm li li a:visited  {
+	color:			#FFF;			/* text color 2 */
+	font: normal 12px/14px 'PT Sans', sans-serif;
+}
+.ssf-mm li li a:hover {
+	color:		#46a941;				
+}
+
+.ssf-mm li {
+	height:			25px;
+	background:		transparent;			/* color 1 */
+}
+.ssf-mm li li, .ssf-mm li li:hover {
+	height:			auto;
+	background:		#005596;			/* color 2 */
+}
+.ssf-mm li:hover, .ssf-mm li.wpm-hover,
+.ssf-mm a:focus, .ssf-mm a:hover, .ssf-mm a:active {
+	text-decoration: none;
+	background:		transparent;			/* color 3 */
+	outline:		0;
+}
+
+.ssf-mm li.selected, 
+.ssf-mm li.current-cat, 
+.ssf-mm li.current-cat-parent, 
+.ssf-mm li.current_page_item, 
+.ssf-mm li.current_page_parent,
+.ssf-mm li.current_page_ancestor {
+	background:		#transparent;			/* color 3 */
+}
+
+.ssf-mm li.right {
+	float: right;
+}
+
+.ssf-mm li.right a, 
+.ssf-mm li.right form {
+	border-left:	1px solid #8EC3F7;	/* border color */	
+	border-right:	0;
+}
+
+.ssf-mm form {
+	margin: 0;
+	padding: 0;
+	background: url('searchbox.png') no-repeat center center;
+	height: 30px;
+	width: 195px;
+	border-right:	1px solid #8EC3F7;	/* border color */	
+}
+
+.ssf-mm form input.wpm-text {
+	border: 0;
+	background: transparent;
+	margin: 6px 0 0 6px;
+	width: 154px;
+	}
+
+.ssf-mm form input.wpm-submit {
+	border: 0;
+	background: transparent;
+	cursor: pointer;
+	height: 20px;
+	width: 26px;
+}
+
+.ssf-mm-after {
+	clear: both;
+	margin: 0;
+	padding: 0;
+	/*background: url('shadow2.png') repeat-x;*/
+	height: 0px;
+}
+
+.ssf-mm li.selected > a {
+	color:#005596;	
+}

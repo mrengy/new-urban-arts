@@ -28,6 +28,11 @@ get_header(); ?>
 						<h3 class="assistive-text"><?php _e( 'Post navigation', 'twentyeleven' ); ?></h3>
 						<span class="nav-previous"><?php previous_post_link( '%link', __( 'Previous', 'twentyeleven' ) ); ?></span>
 						<span class="nav-next">| <?php next_post_link( '%link', __( 'Next', 'twentyeleven' ) ); ?></span>
+						<?php 
+							the_taxonomies( $post->ID ); 
+							
+						?>
+						
 					</nav><!-- #nav-single -->
 
 					<?php echo do_shortcode("[sce-get-featured]");?>

@@ -32,6 +32,10 @@ get_header(); ?>
 							<h3 class="assistive-text"><?php _e( 'Post navigation', 'twentyeleven' ); ?></h3>
 							<span class="nav-previous"><?php previous_post_link( '%link', __( 'Previous', 'twentyeleven' ) ); ?></span>
 							<span class="nav-next">| <?php next_post_link( '%link', __( 'Next', 'twentyeleven' ) ); ?></span>
+							
+							<!-- not working as per codex https://codex.wordpress.org/Template_Tags/next_post_link#Examples
+								<span class="nav-next">| <?php next_post_link( '%link', __( 'Next', 'twentyeleven' ), TRUE, ' ', 'years' ); ?></span>
+							-->
 						
 						</nav><!-- #nav-single -->
 					<?php 
@@ -41,14 +45,19 @@ get_header(); ?>
 					
 					<?php
 					 	//debugging custom fields
-						/*
+						
 						echo '<pre>';
-						// the_taxonomies( $post->ID ); 
+						the_taxonomies( $post->ID ); 
+						echo '<br />';
+						the_terms($post->ID, 'years');
+						
 						// print_r(get_post_custom_keys($post->ID));
-						print_r(get_post_custom_values('_current1'));
+						//print_r(get_post_custom_values('_current1'));
 						//print_r(get_post_custom($post->ID));
+						//print_r(get_post_meta($post->ID));
+						//the_meta();
 						echo '</pre>';
-						*/
+						
 					?>
 					
 					<?php echo do_shortcode("[sce-get-featured]");?>

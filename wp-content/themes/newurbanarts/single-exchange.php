@@ -17,7 +17,7 @@ get_header(); ?>
 </style>
 
 <?php echo do_shortcode("[sce-page-header]");?>
-
+<!--single-exchange.php-->
 
 		<div id="primary" class="exchange">
 			<div id="content" role="main">

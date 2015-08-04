@@ -17,7 +17,7 @@ get_header(); ?>
 </style>
 
 <?php echo do_shortcode("[sce-page-header]");?>
-
+<!--single-board-members.php-->
 
 		<div id="primary" class="board">
 			<div id="content" role="main">

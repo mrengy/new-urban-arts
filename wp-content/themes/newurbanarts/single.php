@@ -18,7 +18,7 @@ get_header(); ?>
 </style>
 
 <?php echo do_shortcode("[sce-page-header]");?>
-
+<!--single.php-->
 		<div id="primary">
 			<div id="content" role="main">
 

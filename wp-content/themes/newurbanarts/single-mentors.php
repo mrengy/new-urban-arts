@@ -31,11 +31,11 @@ get_header(); ?>
 						<nav id="nav-single">
 							<h3 class="assistive-text"><?php _e( 'Post navigation', 'twentyeleven' ); ?></h3>
 							<span class="nav-previous"><?php previous_post_link( '%link', __( 'Previous', 'twentyeleven' ) ); ?></span>
-							<span class="nav-next">| <?php next_post_link( '%link', __( 'Next', 'twentyeleven' ) ); ?></span>
-							
-							<!-- not working as per codex https://codex.wordpress.org/Template_Tags/next_post_link#Examples
-								<span class="nav-next">| <?php next_post_link( '%link', __( 'Next', 'twentyeleven' ), TRUE, ' ', 'years' ); ?></span>
+							<!-- Original next link
+								<span class="nav-next">| <?php next_post_link( '%link', __( 'Next', 'twentyeleven' ) ); ?></span>
 							-->
+							<!-- Restricted next link not working as per codex https://codex.wordpress.org/Template_Tags/next_post_link#Examples -->
+								<span class="nav-next">| <?php next_post_link( '%link', __( 'Next', 'twentyeleven' ), TRUE, ' ', 'years' ); ?></span>
 						
 						</nav><!-- #nav-single -->
 					<?php 

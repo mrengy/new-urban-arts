@@ -48,10 +48,14 @@ get_header(); ?>
 						
 						echo '<pre style="overflow:visible;">';
 						echo '<em>the_taxonomies( $post->ID)</em> ';
-						the_taxonomies( $post->ID ); 
+						echo '<strong>';
+							the_taxonomies( $post->ID ); 
+						echo '</strong>';
 						echo '<br />';
 						echo '<em>the_terms( $post->ID, "years")</em> ';
-						the_terms($post->ID, "years");
+						echo '<strong>';
+							the_terms($post->ID, "years");
+						echo '</strong>';
 						
 						// print_r(get_post_custom_keys($post->ID));
 						//print_r(get_post_custom_values('_current1'));

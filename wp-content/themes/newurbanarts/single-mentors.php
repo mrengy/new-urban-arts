@@ -47,9 +47,11 @@ get_header(); ?>
 					 	//debugging custom fields
 						
 						echo '<pre>';
+						echo '<em>the_taxonomies( $post->ID)</em> ';
 						the_taxonomies( $post->ID ); 
 						echo '<br />';
-						the_terms($post->ID, 'years');
+						echo '<em>the_terms( $post->ID, "years")</em> ';
+						the_terms($post->ID, "years");
 						
 						// print_r(get_post_custom_keys($post->ID));
 						//print_r(get_post_custom_values('_current1'));

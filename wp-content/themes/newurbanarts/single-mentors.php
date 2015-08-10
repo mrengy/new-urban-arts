@@ -46,7 +46,7 @@ get_header(); ?>
 					<?php
 					 	//debugging custom fields
 						
-						echo '<pre>';
+						echo '<pre style="overflow:visible;">';
 						echo '<em>the_taxonomies( $post->ID)</em> ';
 						the_taxonomies( $post->ID ); 
 						echo '<br />';

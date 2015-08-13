@@ -35,7 +35,7 @@ get_header(); ?>
 								<span class="nav-next">| <?php next_post_link( '%link', __( 'Next', 'twentyeleven' ) ); ?></span>
 							-->
 							<!-- Restricted next link not working as per codex https://codex.wordpress.org/Template_Tags/next_post_link#Examples -->
-								<span class="nav-next">| <?php next_post_link( '%link', __( 'Next', 'twentyeleven' ), TRUE, 'years' ); ?></span>
+								<span class="nav-next">| <?php next_post_link( '%link', __( 'Next', 'twentyeleven' ), TRUE, '', 'years' ); ?></span>
 						
 						</nav><!-- #nav-single -->
 					<?php 

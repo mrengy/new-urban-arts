@@ -169,15 +169,4 @@ function my_remove_meta_boxes() {
 }
 add_action( 'admin_menu', 'my_remove_meta_boxes' );
 
-function nua_define_excluded_years() {
-    $nua_years = array( get_the_terms($post->ID, "years") );
-    //$nua_num_years = sizeof($nua_years[0]);
-    array_pop($nua_years[0]);
-    //$nua_num_previous_years = sizeof($nua_years[0]);
-    $nua_previous_years = array();
-    foreach($nua_years[0] as $a_year){
-        array_push($nua_previous_years, $a_year->term_id);
-    }
-    $nua_exclude = implode(',',$nua_previous_years);
-}
 ?>

@@ -53,6 +53,20 @@ get_header(); ?>
 						echo '<strong>';
 							$nua_years = array( get_the_terms($post->ID, "years") );
 							print_r($nua_years);
+						echo '<br />';
+							$nua_num_years = sizeof($nua_years[0]);
+							echo("number of years = $nua_num_years");
+						echo('<br />');
+							$nua_current_year = $nua_years[0][$nua_num_years - 1];
+							echo("current year = ");
+							print_r($nua_current_year);
+						/*
+						echo('<br />');
+							print_r("current year = $nua_years[0][0]");
+						
+						echo('<br />');
+							print_r($nua_years[0]);
+						*/
 							//the_terms($post->ID, "years");
 						echo '</strong>';
 						

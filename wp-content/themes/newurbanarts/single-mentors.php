@@ -59,7 +59,7 @@ get_header(); ?>
 						echo('<br />');
 							$nua_current_year = $nua_years[0][$nua_num_years - 1];
 							echo("current year = ");
-							print_r($nua_current_year);
+							print_r($nua_current_year->name);
 						/*
 						echo('<br />');
 							print_r("current year = $nua_years[0][0]");

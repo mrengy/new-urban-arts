@@ -57,17 +57,16 @@ get_header(); ?>
 							$nua_num_years = sizeof($nua_years[0]);
 							echo("number of years = $nua_num_years");
 						echo('<br />');
+							$nua_previous_years = array_pop($nua_years[0]);
+							$nua_num_previous_years = sizeof($nua_previous_years);
+							echo("number of previous years = $nua_num_previous_years");
+						/*
+						echo('<br />');
 							$nua_current_year = $nua_years[0][$nua_num_years - 1];
 							echo("current year = ");
 							print_r($nua_current_year->name);
-						/*
-						echo('<br />');
-							print_r("current year = $nua_years[0][0]");
-						
-						echo('<br />');
-							print_r($nua_years[0]);
 						*/
-							//the_terms($post->ID, "years");
+						
 						echo '</strong>';
 						
 						// print_r(get_post_custom_keys($post->ID));

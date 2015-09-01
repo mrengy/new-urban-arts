@@ -51,7 +51,9 @@ get_header(); ?>
 						echo '<br />';
 						echo '<em>the_terms( $post->ID, "years")</em> ';
 						echo '<strong>';
-							the_terms($post->ID, "years");
+							$nua_years = array( get_the_terms($post->ID, "years") );
+							print_r($nua_years);
+							//the_terms($post->ID, "years");
 						echo '</strong>';
 						
 						// print_r(get_post_custom_keys($post->ID));

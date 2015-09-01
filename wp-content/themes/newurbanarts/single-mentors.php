@@ -57,9 +57,11 @@ get_header(); ?>
 							$nua_num_years = sizeof($nua_years[0]);
 							echo("number of years = $nua_num_years");
 						echo('<br />');
-							$nua_previous_years = array_pop($nua_years[0]);
-							$nua_num_previous_years = sizeof($nua_previous_years);
+							array_pop($nua_years[0]);
+							$nua_num_previous_years = sizeof($nua_years[0]);
 							echo("number of previous years = $nua_num_previous_years");
+						echo('<br />');
+							print_r($nua_years[0]);
 						/*
 						echo('<br />');
 							$nua_current_year = $nua_years[0][$nua_num_years - 1];

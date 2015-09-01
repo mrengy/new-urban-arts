@@ -26,7 +26,7 @@ get_header(); ?>
 
 					<?php
 					 	//debugging custom fields
-						
+						/*
 						echo '<pre style="overflow:visible;">';
 						echo '<em>the_taxonomies( $post->ID)</em> ';
 						echo '<strong>';
@@ -56,21 +56,23 @@ get_header(); ?>
 							$nua_exclude = implode(',',$nua_previous_years);
 							echo($nua_exclude);
 						echo '</pre>';
-						
+						*/
 					?>
 
 					<?php
 					 	// only show previous / next navigation if this item is 'currently active'
 						if (is_array(get_post_custom_values('_current1'))){
 							if (in_array('yes', get_post_custom_values('_current1'))) { 
+								//defines variable of $nua_exclude which sets all non-current years to exclude from previous and next post links. function is created in functions.php
+								nua_define_excluded_years();
 					?>
-						<nav id="nav-single">
-							<h3 class="assistive-text"><?php _e( 'Post navigation', 'twentyeleven' ); ?></h3>
-							<span class="nav-previous"><?php previous_post_link( '%link', __( 'Previous', 'twentyeleven' ) ); ?></span>
-							<!-- Restricted next link (next in same year) as per codex https://codex.wordpress.org/Template_Tags/next_post_link#Examples -->
-							<span class="nav-next">| <?php next_post_link( '%link', __( 'Next', 'twentyeleven' ), TRUE, $nua_exclude, 'years' ); ?></span>
+								<nav id="nav-single">
+									<h3 class="assistive-text"><?php _e( 'Post navigation', 'twentyeleven' ); ?></h3>
+									<span class="nav-previous"><?php previous_post_link( '%link', __( 'Previous', 'twentyeleven' ) ); ?></span>
+									<!-- Restricted next link (next in same year) as per codex https://codex.wordpress.org/Template_Tags/next_post_link#Examples -->
+									<span class="nav-next">| <?php next_post_link( '%link', __( 'Next', 'twentyeleven' ), TRUE, $nua_exclude, 'years' ); ?></span>
 
-						</nav><!-- #nav-single -->
+								</nav><!-- #nav-single -->
 					<?php 
 							} //end if current 
 						} //end if is array

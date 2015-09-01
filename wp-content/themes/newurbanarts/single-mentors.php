@@ -49,13 +49,13 @@ get_header(); ?>
 						echo('<br />');
 							$nua_previous_years = array();
 							foreach($nua_years[0] as $a_year){
-								array_push($nua_previous_years, $a_year->name);
+								array_push($nua_previous_years, $a_year->term_id);
 							}
 							print_r($nua_previous_years);
 						echo '</pre>';
 						
 					?>
-					
+
 					<?php
 					 	// only show previous / next navigation if this item is 'currently active'
 						if (is_array(get_post_custom_values('_current1'))){

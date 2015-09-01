@@ -52,6 +52,9 @@ get_header(); ?>
 								array_push($nua_previous_years, $a_year->term_id);
 							}
 							print_r($nua_previous_years);
+						echo('<br />');
+							$nua_exclude = implode(',',$nua_previous_years);
+							echo($nua_exclude);
 						echo '</pre>';
 						
 					?>
@@ -65,7 +68,7 @@ get_header(); ?>
 							<h3 class="assistive-text"><?php _e( 'Post navigation', 'twentyeleven' ); ?></h3>
 							<span class="nav-previous"><?php previous_post_link( '%link', __( 'Previous', 'twentyeleven' ) ); ?></span>
 							<!-- Restricted next link (next in same year) as per codex https://codex.wordpress.org/Template_Tags/next_post_link#Examples -->
-							<span class="nav-next">| <?php next_post_link( '%link', __( 'Next', 'twentyeleven' ), TRUE, '', 'years' ); ?></span>
+							<span class="nav-next">| <?php next_post_link( '%link', __( 'Next', 'twentyeleven' ), TRUE, $nua_exclude, 'years' ); ?></span>
 
 						</nav><!-- #nav-single -->
 					<?php 

@@ -180,8 +180,12 @@ function filter_next_post_sort($sort) {
     return $sort;
 }
 function filter_next_post_where($where) {
-    global $post, $wpdb;
+    global $post, $wpdb, $posts_in_year;
     if (get_post_type($post) == 'mentor') {
+        /*
+        //not sure about this
+        $posts_in_year = $wpdb->prepare("SELECT object_id FROM wp_term_relationships WHERE term_taxonomy_id = 33");
+        */
         return $wpdb->prepare("WHERE p.post_title > '%s' AND p.post_type = '". get_post_type($post)."' AND p.post_status = 'publish'",$post->post_title);
     }
     else{
@@ -208,10 +212,12 @@ function filter_previous_post_where($where) {
     }
 }
 
+
 add_filter('get_next_post_sort',   'filter_next_post_sort');
 add_filter('get_next_post_where',  'filter_next_post_where');
 
 add_filter('get_previous_post_sort',  'filter_previous_post_sort');
 add_filter('get_previous_post_where', 'filter_previous_post_where');
+
 
 ?>

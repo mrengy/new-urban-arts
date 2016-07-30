@@ -21,6 +21,15 @@ get_header(); ?>
 
 		<div id="primary" class="mentors">
 			<div id="content" role="main">
+				<?php
+					//not sure about this
+        			global $wpdb, $posts_in_year;
+        			$posts_in_year = $wpdb->get_results("SELECT object_id FROM wp_term_relationships WHERE term_taxonomy_id = 33", ARRAY_N);
+				?>
+				<pre>
+					hello
+					<?php print_r($posts_in_year); ?>
+				</pre>
 
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php

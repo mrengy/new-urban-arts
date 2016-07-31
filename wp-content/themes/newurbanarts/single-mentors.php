@@ -25,15 +25,13 @@ get_header(); ?>
 					//not sure about this
 					
         			global $wpdb;
-        			$nested_posts_with_term = $wpdb->get_results("SELECT object_id FROM wp_term_relationships WHERE term_taxonomy_id = 33", ARRAY_N);
+        			$nested_posts_with_term = $wpdb->get_results("SELECT object_id FROM wp_term_relationships WHERE term_taxonomy_id = 42", ARRAY_N);
 
         			//convert nested array into flat array
-        			$posts_with_term = array(1277,268);
-        			/*
+        			$posts_with_term = array();
         			foreach ($nested_posts_with_term as &$value) {
         				array_push($posts_with_term, $value[0]);
         			}
-					*/
 					echo('<pre>');
 					print_r($posts_with_term);
 					echo('</pre>');

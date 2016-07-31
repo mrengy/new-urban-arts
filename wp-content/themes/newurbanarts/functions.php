@@ -183,18 +183,16 @@ function filter_next_post_where($where) {
     global $post, $wpdb;
 
     //get posts with term (current year)
-    $nested_posts_with_term = $wpdb->get_results("SELECT object_id FROM wp_term_relationships WHERE term_taxonomy_id = 33", ARRAY_N);
+    $nested_posts_with_term = $wpdb->get_results("SELECT object_id FROM wp_term_relationships WHERE term_taxonomy_id = 42", ARRAY_N);
 
         //convert nested array into flat array
-        $posts_with_term = array(1277,268);
-        /*
+        $posts_with_term = array();
         foreach ($nested_posts_with_term as &$value) {
             array_push($posts_with_term, $value[0]);
         }
-        */
 
     if (get_post_type($post) == 'mentor') {
-        return $wpdb->prepare("WHERE p.post_title > '%s' AND p.post_type = '". get_post_type($post)."' AND p.post_status = 'publish' AND in_array(p.post_id, $posts_with_term)",$post->post_title);
+        return $wpdb->prepare("WHERE p.post_title > '%s' AND p.post_type = '". get_post_type($post)."' AND p.post_status = 'publish' AND p.post_id IN $posts_with_term ",$post->post_title);
     }
     else{
         return $wpdb->prepare( "WHERE p.post_date > '%s' AND p.post_type = '". get_post_type($post)."' AND p.post_status = 'publish'", $post->post_date, $post->post_type );

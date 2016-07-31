@@ -23,19 +23,22 @@ get_header(); ?>
 			<div id="content" role="main">
 				<?php
 					//not sure about this
+					
         			global $wpdb;
         			$nested_posts_with_term = $wpdb->get_results("SELECT object_id FROM wp_term_relationships WHERE term_taxonomy_id = 33", ARRAY_N);
 
         			//convert nested array into flat array
-        			$posts_with_term = array();
+        			$posts_with_term = array(1277,268);
+        			/*
         			foreach ($nested_posts_with_term as &$value) {
         				array_push($posts_with_term, $value[0]);
         			}
+					*/
+					echo('<pre>');
+					print_r($posts_with_term);
+					echo('</pre>');
+        			
 				?>
-				<pre>
-					hello
-					<?php print_r($posts_with_term); ?>
-				</pre>
 
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php

@@ -68,18 +68,12 @@ get_header(); ?>
 					 	// only show previous / next navigation if this item is 'currently active'
 						if (is_array(get_post_custom_values('_current1'))){
 							if (in_array('yes', get_post_custom_values('_current1'))) { 
-								//includes function to define non-current years to exclude from previous / next links
-								include('function_define_excluded_years.php');
-								echo('<pre>term ids to exclude from previous / next links<br/>');
-								print_r($nua_exclude);
-								echo('</pre>');
-
 					?>
 								<nav id="nav-single">
 									<h3 class="assistive-text"><?php _e( 'Post navigation', 'twentyeleven' ); ?></h3>
 									<!-- Restricted next and previous link (next in same year) as per codex https://codex.wordpress.org/Template_Tags/next_post_link#Examples -->
-									<span class="nav-previous"><?php previous_post_link( '%link', __( 'Previous', 'twentyeleven' ), TRUE, $nua_exclude, 'years' ); ?></span>
-									<span class="nav-next">| <?php next_post_link( '%link', __( 'Next', 'twentyeleven' ), TRUE, $nua_exclude, 'years' ); ?></span>
+									<span class="nav-previous"><?php previous_post_link( '%link', __( 'Previous', 'twentyeleven' ), TRUE); ?></span>
+									<span class="nav-next">| <?php next_post_link( '%link', __( 'Next', 'twentyeleven' ), TRUE); ?></span>
 
 								</nav><!-- #nav-single -->
 					<?php 

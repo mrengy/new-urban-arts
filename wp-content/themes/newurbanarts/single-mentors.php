@@ -60,7 +60,7 @@ get_header(); ?>
 						echo('</pre>');
 
 
-						$current_post_if_has_term = $wpdb->get_results("SELECT object_id FROM wp_term_relationships WHERE FIND_IN_SET(".$nua_current_post_id.", ".$posts_with_term.") > 0");
+						$current_post_if_has_term = $wpdb->get_results("SELECT object_id FROM wp_term_relationships WHERE" .$nua_current_post_id." IN ".$posts_with_term.") > 0");
 
 	        			echo('<pre>should show current_post_if_has_term id of 42<br/>');
 						print_r($current_post_if_has_term);

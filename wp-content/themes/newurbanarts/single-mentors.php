@@ -43,7 +43,7 @@ get_header(); ?>
 						//not sure about this
 						$my_current_post_id = get_the_ID();
 
-						echo('<pre> post id');
+						echo('<pre>post id <br />');
 						print_r($my_current_post_id);
 						echo('</pre>');
 

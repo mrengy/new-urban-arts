@@ -43,7 +43,7 @@ get_header(); ?>
 						//not sure about this
 						$nua_current_post_id = get_the_ID();
 
-						echo('<pre>post id <br />');
+						echo('<pre>current post id <br />');
 						print_r($nua_current_post_id);
 						echo('</pre>');
 
@@ -71,7 +71,7 @@ get_header(); ?>
 							if (in_array('yes', get_post_custom_values('_current1'))) { 
 								//includes function to define non-current years to exclude from previous / next links
 								include('function_define_excluded_years.php');
-								echo('<pre>term ids to exclude from previous_post_link and next_post_link<br/>');
+								echo('<pre>term ids to exclude from previous / next links<br/>');
 								print_r($nua_exclude);
 								echo('</pre>');
 

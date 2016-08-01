@@ -32,14 +32,28 @@ get_header(); ?>
         			foreach ($nested_posts_with_term as &$value) {
         				array_push($posts_with_term, $value[0]);
         			}
-					echo('<pre>');
+
+					echo('<pre>posts_with_term <br/>');
 					print_r($posts_with_term);
 					echo('</pre>');
-        			
 				?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php
+						//not sure about this
+						$my_current_post_id = get_the_ID();
+
+						echo('<pre> post id');
+						print_r($my_current_post_id);
+						echo('</pre>');
+
+
+						$current_post_if_has_term = $wpdb->get_results("SELECT object_id FROM wp_term_relationships WHERE FIND_IN_SET($my_current_post_id, $posts_with_term) > 0");
+
+	        			echo('<pre>current_post_if_has_term <br/>');
+						print_r($current_post_if_has_term);
+						echo('</pre>');
+
 					 	// only show previous / next navigation if this item is 'currently active'
 						if (is_array(get_post_custom_values('_current1'))){
 							if (in_array('yes', get_post_custom_values('_current1'))) { 

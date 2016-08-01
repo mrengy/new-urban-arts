@@ -52,13 +52,17 @@ get_header(); ?>
   						echo('</pre>');
 
 						echo('<pre>has term id 42?<br />');
-						has_term( 42, 'years');
+						if(has_term( 42, 'years', $nua_current_post_id)){
+							print('yes');
+						} else{
+							print('no');
+						}
 						echo('</pre>');
 
 
 						$current_post_if_has_term = $wpdb->get_results("SELECT object_id FROM wp_term_relationships WHERE FIND_IN_SET(".$nua_current_post_id.", ".$posts_with_term.") > 0");
 
-	        			echo('<pre>current_post_if_has_term id of 42<br/>');
+	        			echo('<pre>should show current_post_if_has_term id of 42<br/>');
 						print_r($current_post_if_has_term);
 						echo('</pre>');
 

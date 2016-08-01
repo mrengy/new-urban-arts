@@ -192,7 +192,7 @@ function filter_next_post_where($where) {
         }
 
     if (get_post_type($post) == 'mentor') {
-        return $wpdb->prepare("WHERE p.post_title > '%s' AND p.post_type = '". get_post_type($post)."' AND p.post_status = 'publish' AND FIND_IN_SET(p.post_id, $posts_with_term) > 0",$post->post_title);
+        return $wpdb->prepare("WHERE p.post_title > '%s' AND p.post_type = '". get_post_type($post)."' AND p.post_status = 'publish' AND FIND_IN_SET(p.post_id, ".$posts_with_term.") > 0",$post->post_title);
     }
     else{
         return $wpdb->prepare( "WHERE p.post_date > '%s' AND p.post_type = '". get_post_type($post)."' AND p.post_status = 'publish'", $post->post_date, $post->post_type );

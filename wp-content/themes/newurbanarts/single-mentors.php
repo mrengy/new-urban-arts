@@ -71,6 +71,10 @@ get_header(); ?>
 							if (in_array('yes', get_post_custom_values('_current1'))) { 
 								//includes function to define non-current years to exclude from previous / next links
 								include('function_define_excluded_years.php');
+								echo('<pre>term ids to exclude from previous_post_link and next_post_link<br/>');
+								print_r($nua_exclude);
+								echo('</pre>');
+
 					?>
 								<nav id="nav-single">
 									<h3 class="assistive-text"><?php _e( 'Post navigation', 'twentyeleven' ); ?></h3>

@@ -48,7 +48,11 @@ get_header(); ?>
 						echo('</pre>');
 
 						echo('<pre>post terms for years<br />');
-						print_r(wp_get_post_terms($nua_current_post_id,'years'));
+ +						print_r(wp_get_post_terms($nua_current_post_id,'years'));
+  						echo('</pre>');
+
+						echo('<pre>has term id 42?<br />');
+						has_term( 42, 'years');
 						echo('</pre>');
 
 

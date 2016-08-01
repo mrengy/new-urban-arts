@@ -33,7 +33,7 @@ get_header(); ?>
         				array_push($posts_with_term, $value[0]);
         			}
 
-					echo('<pre>posts_with_term <br/>');
+					echo('<pre>posts_with_term id of 42<br/>');
 					print_r($posts_with_term);
 					echo('</pre>');
 				?>
@@ -41,16 +41,20 @@ get_header(); ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php
 						//not sure about this
-						$my_current_post_id = get_the_ID();
+						$nua_current_post_id = get_the_ID();
 
 						echo('<pre>post id <br />');
-						print_r($my_current_post_id);
+						print_r($nua_current_post_id);
+						echo('</pre>');
+
+						echo('<pre>post terms for years<br />');
+						print_r(wp_get_post_terms($nua_current_post_id,'years'));
 						echo('</pre>');
 
 
-						$current_post_if_has_term = $wpdb->get_results("SELECT object_id FROM wp_term_relationships WHERE FIND_IN_SET(".$my_current_post_id.", ".$posts_with_term.") > 0");
+						$current_post_if_has_term = $wpdb->get_results("SELECT object_id FROM wp_term_relationships WHERE FIND_IN_SET(".$nua_current_post_id.", ".$posts_with_term.") > 0");
 
-	        			echo('<pre>current_post_if_has_term <br/>');
+	        			echo('<pre>current_post_if_has_term id of 42<br/>');
 						print_r($current_post_if_has_term);
 						echo('</pre>');
 

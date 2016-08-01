@@ -72,8 +72,8 @@ get_header(); ?>
 								<nav id="nav-single">
 									<h3 class="assistive-text"><?php _e( 'Post navigation', 'twentyeleven' ); ?></h3>
 									<!-- Restricted next and previous link (next in same year) as per codex https://codex.wordpress.org/Template_Tags/next_post_link#Examples -->
-									<span class="nav-previous"><?php previous_post_link( '%link', __( 'Previous', 'twentyeleven' ), TRUE); ?></span>
-									<span class="nav-next">| <?php next_post_link( '%link', __( 'Next', 'twentyeleven' ), TRUE); ?></span>
+									<span class="nav-previous"><?php previous_post_link( '%link', __( 'Previous', 'twentyeleven' )); ?></span>
+									<span class="nav-next">| <?php next_post_link( '%link', __( 'Next', 'twentyeleven' )); ?></span>
 
 								</nav><!-- #nav-single -->
 					<?php 

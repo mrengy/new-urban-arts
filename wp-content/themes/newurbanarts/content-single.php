@@ -58,7 +58,7 @@
 
         	echo('Region: ');
         	foreach ($post_regions as $key => $value) {
-        		echo('<a href="'.esc_url(get_tag_link($value->term_id)).'" >'.$value->name.'</a>');
+        		echo('<a href="'.esc_url(get_tag_link($value->term_id)).'" class="'.$value->name.'" >'.$value->name.'</a>');
         		if ($key != $last_region_key){
         			echo(', ');
         		}

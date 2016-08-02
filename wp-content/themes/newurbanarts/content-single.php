@@ -49,7 +49,20 @@
 				get_the_author(),
 				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) )
 			);
-*/
+*/			
+			//just for stackexchange question
+			$post_regions = get_the_terms($post->ID,'years');
+			
+			$region_keys = array_keys($post_regions);
+			$last_region_key = array_pop($region_keys);
+
+        	echo('Region: ');
+        	foreach ($post_regions as $key => $value) {
+        		echo('<a href="'.esc_url(get_tag_link($value->term_id)).'" >'.$value->name.'</a>');
+        		if ($key != $last_region_key){
+        			echo(', ');
+        		}
+        	}
 		?>
 		<?php //edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
 
